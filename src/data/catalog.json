@@ -25,13 +25,13 @@
       "title": "Choose your sensors",
       "icon": "sensor",
       "nextLabel": "Next: Add extra protection",
-      "productIds": ["wyze-sense-motion", "wyze-sense-entry", "wyze-sense-hub"]
+      "productIds": ["wyze-sense-motion", "wyze-sense-hub"]
     },
     {
       "id": "protection",
       "title": "Add extra protection",
       "icon": "grid",
-      "productIds": ["wyze-microsd-256", "wyze-cam-lock", "wyze-outdoor-cable"]
+      "productIds": ["wyze-microsd-256", "wyze-outdoor-cable"]
     }
   ],
   "products": [
