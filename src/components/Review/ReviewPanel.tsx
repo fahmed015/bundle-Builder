@@ -56,7 +56,7 @@ export function ReviewPanel() {
         most safe.
       </p>
 
-      <div className="mt-5 grid grid-cols-1 gap-1.25 px-1.25 md:grid-cols-2 lg:grid-cols-1">
+      <div className="mt-5 grid grid-cols-1 gap-1.25 md:gap-13 lg:gap-2.5 px-1.25 md:grid-cols-2 lg:grid-cols-1">
         <div className="space-y-2.5">
           {isEmpty ? (
             <div className="border-t border-[#CED6DE] py-8 text-center">
@@ -91,7 +91,7 @@ export function ReviewPanel() {
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-border/70 bg-surface text-success">
                   <TruckIcon />
                 </div>
-                <p className="min-w-0 flex-1 text-sm font-medium text-text">
+                <p className="min-w-0 flex-1 text-[12px] md:text-[16px] font-medium text-text">
                   Fast Shipping
                 </p>
                 <div className="shrink-0 text-right leading-tight">
@@ -127,7 +127,7 @@ export function ReviewPanel() {
             </div>
 
             {savings > 0 ? (
-              <p className="text-center text-[12px] font-medium text-success">
+              <p className="text-center text-[12px] font-medium text-[#0AA288]">
                 Congrats! You&apos;re saving {formatMoney(savings)} on your
                 security bundle!
               </p>

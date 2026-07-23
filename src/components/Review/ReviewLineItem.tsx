@@ -44,7 +44,7 @@ export function ReviewLineItem({
         </div>
       ) : null}
 
-      <p className="min-w-0 flex-1 text-[16px] font-medium text-text">
+      <p className="min-w-0 flex-1 text-[12px] md:text-[16px] font-medium text-text">
         {line.product.icon === "cam-plus" ? (
           <>
             <span className="font-bold text-text">Cam </span>
