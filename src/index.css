@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --purple-50: #f1ecff;
+  --purple-100: #cbbdff;
+  --purple-500: #6a45e0;
+  --purple-600: #5028d4;
+  --purple-700: #4320b8;
+  --purple-600-transparent: #4e2fd2b2;
+  --purple-800: #4e2fd2;
+
+  --navy-700: #3a4258;
+  --navy-900: #161c2d;
+
+  --green-50: #1df0bb0a;
+  --green-100: #b3f0d4;
+  --green-500: #0aa288;
+  --green-600: #009660;
+  --green-600-transparent: #009660b2;
+  --green-800: #007a4d;
+
+  --black: #0b0d10;
+  --black-200: #1f1f1fbf;
+  --black-50: #484848;
+  --black-100: #575757;
+
+  --slate-100: #eef2f7;
+  --slate-150: #f3f5f8;
+  --slate-200: #eef0f5;
+  --slate-300: #d5dbe6;
+  --slate-400: #c2cad8;
+  --slate-500: #7a8499;
+
+  --sky-50: #e4ecf8;
+  --sky-100: #edf4ff;
+  --sky-200: #d3e0ef;
+
+  --indigo-500: #3d5afe;
+  --amber-500: #d97706;
+  --red-500: #d14343;
+  --green-600: #1b9e55;
+
+  --teal-500: #2fb094;
+  --white: #ffffff;
+}
+
+@theme inline {
+  --font-sans: "Gilroy", system-ui, sans-serif;
+
+  --color-primary: var(--purple-600);
+  --color-primary-hover: var(--purple-700);
+  --color-primary-soft: var(--purple-50);
+  --color-primary-ring: var(--purple-100);
+  --color-primary-accent: var(--purple-500);
+  --color-on-primary: var(--white);
+  --color-primary-badge: var(--purple-800);
+  --color-primary-border: var(--purple-600-transparent);
+
+  --color-background: var(--white);
+  --color-surface: var(--white);
+  --color-surface-muted: var(--sky-100);
+  --color-surface-hover: var(--sky-200);
+  --color-control: var(--slate-150);
+  --color-overlay: color-mix(in srgb, var(--navy-900) 40%, transparent);
+  --color-hover: color-mix(in srgb, var(--navy-900) 4%, transparent);
+
+  --color-text: var(--black);
+  --color-text-soft: var(--black-200);
+  --color-text-muted: var(--black-50);
+  --color-text-price: var(--black-100);
+
+  --color-border: var(--slate-300);
+  --color-border-strong: var(--slate-400);
+  --color-border-muted: var(--sky-200);
+
+  --color-success: var(--green-600);
+  --color-warning: var(--amber-500);
+  --color-danger: var(--red-500);
+  --color-info: var(--indigo-500);
+  --color-variant: var(--teal-500);
+
+  --color-selected-border: var(--green-500);
+  --color-selected-bg: var(--green-50);
+
+  --radius-card: 1.25rem;
+  --radius-panel: 1rem;
+}
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+
+  body {
+    @apply m-0 bg-background text-text antialiased;
+  }
+
+  button {
+    font: inherit;
+  }
+
+  ::selection {
+    @apply bg-primary-ring;
+  }
+}
+
+.guarantee-seal {
+  border-radius: 50%;
+  background:
+    radial-gradient(
+        circle at 50% 50%,
+        var(--color-primary) 62%,
+        transparent 63%
+      )
+      padding-box,
+    repeating-conic-gradient(
+        from 0deg,
+        var(--color-primary) 0deg 10deg,
+        var(--color-primary-accent) 10deg 18deg
+      )
+      border-box;
+  box-shadow: 0 4px 14px
+    color-mix(in srgb, var(--color-primary) 28%, transparent);
+}
